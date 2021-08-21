@@ -41,7 +41,8 @@ namespace GraphQLDotNetCore
             services.AddScoped<AppSchema>();
             services.AddGraphQL()
                 .AddSystemTextJson()
-                .AddGraphTypes(typeof(AppSchema), ServiceLifetime.Scoped);
+                .AddGraphTypes(typeof(AppSchema), ServiceLifetime.Scoped)
+                .AddDataLoader();
 
             services.AddControllers()
                 .AddNewtonsoftJson(o => o.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
