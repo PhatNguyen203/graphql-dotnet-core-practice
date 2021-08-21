@@ -1,5 +1,6 @@
 ﻿using GraphQLDotNetCore.Contracts;
 using GraphQLDotNetCore.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,6 +18,11 @@ namespace GraphQLDotNetCore.Repository
 		public IEnumerable<Owner> GetAll()
 		{
             return _context.Owners.ToList();
+		}
+
+		public Owner GetOwnerById(Guid id)
+		{
+			return _context.Owners.SingleOrDefault(x => x.Id.Equals(id));
 		}
 	}
 }
