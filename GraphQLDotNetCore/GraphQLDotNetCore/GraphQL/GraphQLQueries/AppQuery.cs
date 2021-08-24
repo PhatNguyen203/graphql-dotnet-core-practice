@@ -28,7 +28,7 @@ namespace GraphQLDotNetCore.GraphQL.GraphQLQueries
 						context.Errors.Add(new ExecutionError("Owner not found!!!!"));
 						return null;
 					}
-					id = context.GetArgument<Guid>("ownerId");
+					//id = context.GetArgument<Guid>("ownerId"); not need it because of out id
 					return repo.GetOwnerById(id);
 				}
 				);
