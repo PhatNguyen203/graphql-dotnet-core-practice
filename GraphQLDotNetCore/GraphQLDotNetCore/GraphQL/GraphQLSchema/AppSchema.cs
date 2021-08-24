@@ -13,6 +13,7 @@ namespace GraphQLDotNetCore.GraphQLSchema
 		public AppSchema(IServiceProvider provider) : base(provider) 
 		{
 			Query = provider.GetRequiredService<AppQuery>();
+			Mutation = provider.GetRequiredService<AppMutations>();
 		}
 	}
 }
