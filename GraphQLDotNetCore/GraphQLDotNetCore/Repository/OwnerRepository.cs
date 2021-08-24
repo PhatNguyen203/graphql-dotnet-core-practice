@@ -23,6 +23,12 @@ namespace GraphQLDotNetCore.Repository
 			return owner;
 		}
 
+		public void DeleteOwner(Owner owner)
+		{
+			_context.Remove(owner);
+			_context.SaveChanges();
+		}
+
 		public IEnumerable<Owner> GetAll()
 		{
             return _context.Owners.ToList();
@@ -31,6 +37,14 @@ namespace GraphQLDotNetCore.Repository
 		public Owner GetOwnerById(Guid id)
 		{
 			return _context.Owners.SingleOrDefault(x => x.Id.Equals(id));
+		}
+
+		public Owner UpdateOwner(Owner db, Owner owner)
+		{
+			db.Name = owner.Name;
+			db.Address = owner.Address;
+			_context.SaveChanges();
+			return db;
 		}
 	}
 }

@@ -69,4 +69,3 @@ C:\Users\Lee0n\OneDrive\Desktop\New folder\graphql-series\Starting project\Graph
 C:\Users\Lee0n\OneDrive\Desktop\New folder\graphql-series\Starting project\GraphQLDotNetCore\GraphQLDotNetCore\bin\Debug\netcoreapp3.1\System.Reactive.Linq.dll
 C:\Users\Lee0n\OneDrive\Desktop\New folder\graphql-series\Starting project\GraphQLDotNetCore\GraphQLDotNetCore\bin\Debug\netcoreapp3.1\System.Reactive.dll
 C:\Users\Lee0n\OneDrive\Desktop\New folder\graphql-series\Starting project\GraphQLDotNetCore\GraphQLDotNetCore\bin\Debug\netcoreapp3.1\System.Reactive.xml
-C:\Users\Lee0n\OneDrive\Desktop\New folder\graphql-series\Starting project\GraphQLDotNetCore\GraphQLDotNetCore\obj\Debug\netcoreapp3.1\GraphQLDotNetCore.csprojAssemblyReference.cache

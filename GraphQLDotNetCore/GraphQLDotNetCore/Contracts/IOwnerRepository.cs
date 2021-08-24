@@ -10,5 +10,7 @@ namespace GraphQLDotNetCore.Contracts
         IEnumerable<Owner> GetAll();
         Owner GetOwnerById(Guid id);
         Owner CreateNewOwner(Owner owner);
+        Owner UpdateOwner(Owner db, Owner owner);
+        void DeleteOwner(Owner owner);
     }
 }
