@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GraphQL.Server.Ui.Voyager;
+using GraphQLPractice.GraphQL.Platforms;
 
 namespace GraphQLPractice
 {
@@ -31,7 +32,8 @@ namespace GraphQLPractice
 
             services.AddGraphQLServer()
                 .AddProjections()
-                .AddQueryType<Query>();
+                .AddQueryType<Query>()
+                .AddType<PlatformType>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
