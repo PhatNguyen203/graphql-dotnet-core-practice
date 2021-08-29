@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using GraphQL.Server.Ui.Voyager;
 using GraphQLPractice.GraphQL.Platforms;
+using GraphQLPractice.GraphQL.Commands;
 
 namespace GraphQLPractice
 {
@@ -30,10 +31,14 @@ namespace GraphQLPractice
         {
             services.AddPooledDbContextFactory<AppDbContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("SqlConn")));
 
-            services.AddGraphQLServer()
-                .AddProjections()
+            services
+                .AddGraphQLServer()
                 .AddQueryType<Query>()
-                .AddType<PlatformType>();
+                .AddType<PlatformType>()
+                .AddType<CommandType>()
+                .AddFiltering()
+                .AddSorting()
+                .AddInMemorySubscriptions();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

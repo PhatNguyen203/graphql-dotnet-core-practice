@@ -10,13 +10,12 @@ namespace GraphQLPractice.GraphQL
     {
         [GraphQLDescription("Get queryable all platforms")]
         [UseDbContext(typeof(AppDbContext))]
-        [UseProjection]
         public IQueryable<Platform> GetPlatforms([ScopedService] AppDbContext context ){
             return context.Platforms;
         }
         [GraphQLDescription("Gets the queryable command.")]
         [UseDbContext(typeof(AppDbContext))]
-        public IQueryable<Command>GetCommands([ScopedService] AppDbContext context){
+        public IQueryable<Command> GetCommands([ScopedService] AppDbContext context){
             return context.Commands;
         }
     }
