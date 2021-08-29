@@ -38,6 +38,8 @@ namespace GraphQLPractice
                 .AddType<AddPlatformInputType>()
                 .AddType<AddPlatformPayloadType>()
                 .AddType<CommandType>()
+                .AddType<AddCommandInputType>()
+                .AddType<AddCommandPayloadType>()
                 .AddMutationType<Mutation>()
                 .AddFiltering()
                 .AddSorting()
