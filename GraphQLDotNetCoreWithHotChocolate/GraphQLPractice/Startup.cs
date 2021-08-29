@@ -34,13 +34,14 @@ namespace GraphQLPractice
             services
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
+                .AddMutationType<Mutation>()
+                .AddSubscriptionType<Subcription>()
                 .AddType<PlatformType>()
                 .AddType<AddPlatformInputType>()
                 .AddType<AddPlatformPayloadType>()
                 .AddType<CommandType>()
                 .AddType<AddCommandInputType>()
                 .AddType<AddCommandPayloadType>()
-                .AddMutationType<Mutation>()
                 .AddFiltering()
                 .AddSorting()
                 .AddInMemorySubscriptions();
@@ -53,6 +54,8 @@ namespace GraphQLPractice
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseWebSockets();
 
             app.UseRouting();
 
