@@ -35,7 +35,10 @@ namespace GraphQLPractice
                 .AddGraphQLServer()
                 .AddQueryType<Query>()
                 .AddType<PlatformType>()
+                .AddType<AddPlatformInputType>()
+                .AddType<AddPlatformPayloadType>()
                 .AddType<CommandType>()
+                .AddMutationType<Mutation>()
                 .AddFiltering()
                 .AddSorting()
                 .AddInMemorySubscriptions();
